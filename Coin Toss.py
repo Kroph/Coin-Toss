@@ -9,7 +9,7 @@ clock = pygame.time.Clock()
 screen_width, screen_height = 1000, 800
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Coin-Toss')
-pygame.display.set_icon(pygame.image.load("images/coin_icon.png").convert_alpha()) # иконка игры
+pygame.display.set_icon(pygame.image.load("images/coin_icon.png").convert_alpha())
 
 coin_imgs = [pygame.image.load(f'images/coin/Coin_{i}.png').convert_alpha() for i in range(1, 14)]
 coin_imgs = [pygame.transform.scale(img, (300, 300)) for img in coin_imgs]
@@ -39,7 +39,6 @@ while running:
                 flip_frame = 0
                 coin_flip_sound.play()
 
-    # Clear the screen
     screen.fill((223,215,175))
 
     if flip_animation:
